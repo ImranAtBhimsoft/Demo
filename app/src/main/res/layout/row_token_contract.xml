@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.metallicus.protonsdk.model.TokenContract" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardElevation="4dp"
+        app:cardForegroundColor="#00000000"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="20dp"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextHeading"
+                    android:text="@string/id" />
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:gravity="end"
+                    android:text="@{data.id}"
+                    tools:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextHeading"
+                    android:text="@string/name" />
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:gravity="end"
+                    android:text="@{String.valueOf(data.name)}"
+                    tools:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextHeading"
+                    android:text="@string/precision_symbol" />
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:gravity="end"
+                    android:text="@{data.precisionSymbol}"
+                    tools:text="precisionSymbol" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextHeading"
+                    android:text="@string/black_listed" />
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:gravity="end"
+                    android:text="@{String.valueOf(data.symbol)}"
+                    tools:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextHeading"
+                    android:text="@string/description" />
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:gravity="end"
+                    android:text="@{data.description}"
+                    tools:text="Name" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

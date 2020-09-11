@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.esf.protonsdkdemo.viewmodels.ChainProviderViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/label_name"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_name"
+                android:gravity="end"
+                android:text="@{viewModel.name}"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/label_description"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:text="@string/description" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_description"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_description"
+                android:gravity="end"
+                android:text="@{viewModel.description}"
+                tools:text="Description" />
+
+            <TextView
+                android:id="@+id/label_chain_url"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description"
+                android:text="@string/chain_url" />
+
+            <TextView
+                android:id="@+id/chain_url"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_chain_url"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_chain_url"
+                android:gravity="end"
+                android:text="@{viewModel.chainUrl}"
+                tools:text="Chain URL" />
+
+            <TextView
+                android:id="@+id/label_explorer_name"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chain_url"
+                android:text="@string/explorer_name" />
+
+            <TextView
+                android:id="@+id/explorer_name"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_explorer_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_explorer_name"
+                android:gravity="end"
+                android:text="@{viewModel.explorerName}"
+                tools:text="Explorer Name" />
+
+            <TextView
+                android:id="@+id/label_explorer_url"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/explorer_name"
+                android:text="@string/explorer_url" />
+
+            <TextView
+                android:id="@+id/explorer_url"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_explorer_url"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_explorer_url"
+                android:gravity="end"
+                android:text="@{viewModel.explorerUrl}"
+                tools:text="Explorer Url" />
+
+            <TextView
+                android:id="@+id/label_icon_url"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/explorer_url"
+                android:text="@string/icon_url" />
+
+            <TextView
+                android:id="@+id/icon_url"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_icon_url"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_icon_url"
+                android:gravity="end"
+                android:text="@{viewModel.iconUrl}"
+                tools:text="Icon Url" />
+
+            <TextView
+                android:id="@+id/label_is_testnet"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_url"
+                android:text="@string/is_testnet" />
+
+            <TextView
+                android:id="@+id/is_testnet"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_is_testnet"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_is_testnet"
+                android:gravity="end"
+                android:text="@{String.valueOf(viewModel.isTestnet)}"
+                tools:text="is_testnet" />
+
+            <TextView
+                android:id="@+id/label_resourceTokenSymbol"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/is_testnet"
+                android:text="@string/resource_token_symbol" />
+
+            <TextView
+                android:id="@+id/resourceTokenSymbol"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_resourceTokenSymbol"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_resourceTokenSymbol"
+                android:gravity="end"
+                android:text="@{viewModel.resourceTokenSymbol}"
+                tools:text="resourceTokenSymbol" />
+
+            <TextView
+                android:id="@+id/label_resource_token_contract"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resourceTokenSymbol"
+                android:text="@string/resource_token_contract" />
+
+            <TextView
+                android:id="@+id/resource_token_contract"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_resource_token_contract"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_resource_token_contract"
+                android:gravity="end"
+                android:text="@{viewModel.resourceTokenContract}"
+                tools:text="resourceTokenSymbol" />
+
+            <TextView
+                android:id="@+id/label_system_token_symbol"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resource_token_contract"
+                android:text="@string/system_token_symbol" />
+
+            <TextView
+                android:id="@+id/system_token_symbol"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_system_token_symbol"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_system_token_symbol"
+                android:gravity="end"
+                android:text="@{viewModel.systemTokenSymbol}"
+                tools:text="System Token Symbol" />
+
+
+            <TextView
+                android:id="@+id/label_system_token_contract"
+                style="@style/TextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_system_token_symbol"
+                android:text="@string/system_token_contract" />
+
+            <TextView
+                android:id="@+id/system_token_contract"
+                style="@style/TextNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/label_system_token_contract"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/label_system_token_contract"
+                android:gravity="end"
+                android:text="@{viewModel.systemTokenContract}"
+                tools:text="System Token Contract" />
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
